@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const StudentTable = ({ branchName, studentData }) => {
+  const [errorMessage, setErrorMessage] = useState('');
 
   // useState for load data
   const [currentUser, setCurrentUser] = useState({
@@ -27,8 +28,7 @@ const StudentTable = ({ branchName, studentData }) => {
       })
       .catch(err => {
         console.log("AddUserTable.jsx => ", err);
-        setToastMessage(err);
-        setShowToast(true);
+        setErrorMessage(err.response?.data?.msg || 'Unable to load your profile.');
       });
   }, []);
 
@@ -37,6 +37,7 @@ const StudentTable = ({ branchName, studentData }) => {
     <Accordion.Item eventKey={branchName} className='shadow-md'>
       <Accordion.Header>{branchName}</Accordion.Header>
       <Accordion.Body>
+        {errorMessage && <p role="alert">{errorMessage}</p>}
         <Table striped borderless hover className='w-fit'>
           <thead>
             <tr>
@@ -53,7 +54,7 @@ const StudentTable = ({ branchName, studentData }) => {
           <tbody>
             {
               studentData?.length > 0 ? (
-                studentData
+                [...studentData]
                   ?.sort((a, b) => {
                     const rollA = parseInt(a?.studentProfile?.rollNumber || 0);
                     const rollB = parseInt(b?.studentProfile?.rollNumber || 0);

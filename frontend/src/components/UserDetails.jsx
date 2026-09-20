@@ -79,10 +79,10 @@ function UserDetails() {
         setUserData(response.data);
         // console.log(response.data)
       } catch (error) {
-        if (error.response.data) {
+        if (error.response?.data) {
           setToastMessage(error.response.data.msg);
           setShowToast(true);
-          if (error.response.data.msg === "Student not found" || "user not found")
+          if (["Student not found", "user not found"].includes(error.response.data.msg))
             navigate("../404")
         }
         console.error("Error fetching student data", error);

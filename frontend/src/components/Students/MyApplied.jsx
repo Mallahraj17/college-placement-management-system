@@ -10,6 +10,7 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 function MyApplied() {
   document.title = 'CPMS | My Applied Job';
   const [loading, setLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // useState for load data
   const [currentUser, setCurrentUser] = useState({});
@@ -32,8 +33,8 @@ function MyApplied() {
       })
       .catch(err => {
         console.log("MyApplied.jsx => ", err);
-        setToastMessage(err);
-        setShowToast(true);
+        setErrorMessage(err.response?.data?.msg || 'Unable to load your profile. Please sign in again.');
+        setLoading(false);
       });
   }, []);
 
@@ -52,6 +53,7 @@ function MyApplied() {
       // if (response?.data?.msg)
     } catch (error) {
       console.log("Error While Fetching Error => ", error);
+      setErrorMessage(error.response?.data?.msg || 'Unable to load your applications.');
     } finally {
       setLoading(false)
     }
@@ -69,6 +71,7 @@ function MyApplied() {
 
   return (
     <>
+      {errorMessage && <p role="alert">{errorMessage}</p>}
       {
         loading ? (
           <TablePlaceholder />

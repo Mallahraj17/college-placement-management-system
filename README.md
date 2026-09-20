@@ -1,5 +1,9 @@
 # College Placement Management System
 
+This educational copy is maintained at [Mallahraj17/college-placement-management-system](https://github.com/Mallahraj17/college-placement-management-system).
+Based on [Moin MN's original project](https://github.com/MoinMN/college-placement-management-system); the original non-commercial license and attribution remain in [LICENSE](LICENSE).
+See [LOCAL_SETUP.md](LOCAL_SETUP.md) for corrected setup instructions and verification notes.
+
 ## Table of Contents
 - [College Placement Management System](#college-placement-management-system)
   - [Table of Contents](#table-of-contents)
@@ -88,7 +92,7 @@ The **College Placement Management System** is a web application designed to str
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/moinmn/college-placement-management-system.git
+git clone https://github.com/Mallahraj17/college-placement-management-system.git
 cd college-placement-management-system
 ```
 
@@ -104,7 +108,7 @@ cd college-placement-management-system
 3. Create a `.env` file for environment variables:
    ```env
    PORT=4518
-   MONGO_URI=your_mongodb_connection_string
+  MONGODB_URL=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
    CLOUDINARY_API_KEY=your_cloudinary_api_key

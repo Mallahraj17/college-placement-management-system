@@ -43,15 +43,20 @@ const UploadResume = ({ fetchCurrentUserData }) => {
     }
 
     const formData = new FormData();
+    const file = e.target.files[0];
+    if (!file.name.toLowerCase().endsWith('.pdf') || file.size > 5 * 1024 * 1024) {
+      setUploadStatus('Choose a PDF no larger than 5 MB.');
+      return;
+    }
     formData.append('resume', e.target.files[0]);
     formData.append('userId', currentUser.id);
 
     try {
-      const response = await axios.post(`${BASE_URL}/student/upload-resume`,
+      await axios.post(`${BASE_URL}/student/upload-resume`,
         formData,
         {
           headers: {
-            'Content-Type': 'multipart/form-data'
+            Authorization: `Bearer ${localStorage.getItem('token')}`
           }
         }
       );
@@ -61,7 +66,7 @@ const UploadResume = ({ fetchCurrentUserData }) => {
       setUploadStatus('Resume uploaded successfully');
     } catch (error) {
       console.error('Error uploading the resume', error);
-      setUploadStatus('Error uploading the resume');
+      setUploadStatus(error.response?.data?.msg || 'Error uploading the resume');
     }
   };
 
@@ -71,7 +76,7 @@ const UploadResume = ({ fetchCurrentUserData }) => {
       <FloatingLabel controlId="floatingResume" label="Update Resume">
         <Form.Control
           type="file"
-          accept='.pdf, .doc, .docx'
+          accept='.pdf,application/pdf'
           placeholder="Upload Resume"
           name='resume'
           onChange={handleSubmit}

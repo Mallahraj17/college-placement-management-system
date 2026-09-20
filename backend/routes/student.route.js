@@ -32,7 +32,10 @@ router.post('/login', Login);
 
 
 // Route to upload resume
-router.post('/upload-resume', upload.single('resume'), UploadResume);
+router.post('/upload-resume', authenticateToken, (req, res, next) => {
+  if (req.user.role !== 'student') return res.status(403).json({ msg: 'Student account required.' });
+  next();
+}, upload.single('resume'), UploadResume);
 
 // Route to upload offer letter
 router.post('/upload-offer-letter', upload.single('offerLetter'), UploadOfferLetter);

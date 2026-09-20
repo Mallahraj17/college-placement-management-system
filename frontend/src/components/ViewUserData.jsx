@@ -97,7 +97,7 @@ function ViewUserData() {
         if (error.response?.data) {
           setToastMessage(error.response.data.msg || error.message);
           setShowToast(true);
-          if (error.response.data.msg === "Student not found" || "user not found") {
+          if (["Student not found", "user not found"].includes(error.response.data.msg)) {
             navigate("../404");
           }
         } else {

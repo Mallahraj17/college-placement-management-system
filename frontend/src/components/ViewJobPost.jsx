@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import Toast from './Toast';
@@ -12,6 +12,7 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 function ViewJobPost() {
   document.title = 'CPMS | View Job Post';
   const { jobId } = useParams();
+  const navigate = useNavigate();
 
   const [data, setData] = useState({});
   const [company, setCompany] = useState(null);
@@ -41,7 +42,7 @@ function ViewJobPost() {
       }
     } catch (error) {
       if (error?.response?.data?.msg) {
-        setToastMessage(response?.data?.msg);
+        setToastMessage(error.response.data.msg);
         setShowToast(true);
       }
       console.log("error while fetching student applied or not => ", error);

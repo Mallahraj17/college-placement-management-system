@@ -31,6 +31,7 @@ const UserSchema = new mongoose.Schema({
     isApproved: { type: Boolean },
     rollNumber: { type: Number },
     resume: { type: String, },
+    resumePublicId: { type: String },
     UIN: { type: String, unique: true, sparse: true, trim: true },
     department: { type: String, enum: ['Computer', 'Civil', 'ECS', 'AIDS', 'Mechanical'] },
     year: { type: Number, enum: [1, 2, 3, 4] },
