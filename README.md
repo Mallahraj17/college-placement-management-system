@@ -1,7 +1,7 @@
 # College Placement Management System
 
 This educational copy is maintained at [Mallahraj17/college-placement-management-system](https://github.com/Mallahraj17/college-placement-management-system).
-Based on [Moin MN's original project](https://github.com/MoinMN/college-placement-management-system); the original non-commercial license and attribution remain in [LICENSE](LICENSE).
+Based on [Moin MN's original project](https://github.com/MoinMN/college-placement-management-system). See the [original author's license](https://github.com/MoinMN/college-placement-management-system/blob/main/LICENSE) for its usage terms.
 See [LOCAL_SETUP.md](LOCAL_SETUP.md) for corrected setup instructions and verification notes.
 
 ## Table of Contents
