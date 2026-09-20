@@ -61,6 +61,16 @@ kubectl get pods -n cpms
 
 ## 🧠 Deploy Backend
 
+Build Raj's local images from the repository root and load them into the Kind cluster before deploying:
+
+```bash
+docker build -t cpms-backend:raj ./backend
+docker build -t cpms-frontend:raj ./frontend
+kind load docker-image cpms-backend:raj cpms-frontend:raj --name cpms-cluster
+```
+
+Then run the following commands from the kubernetes directory. These image tags refer to local builds, not a published registry.
+
 ```bash
 kubectl apply -f backend-config.yaml -f backend-secret.yaml -f backend-deployment.yaml -f backend-service.yaml
 kubectl get pods -n cpms

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Logo from '../../assets/CPMS.png';
+const Logo = '/CPMS.svg';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 

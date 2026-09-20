@@ -29,7 +29,7 @@ function LandFooter() {
         {/* Footer Text */}
         <div className="text-center text-sm text-gray-600">
           <p>© 2024 <span className="text-green-600 font-semibold">College Placement Management System</span>. All rights reserved.</p>
-          <p className="mt-1 text-xs text-gray-500">Developed by Final Year Students of Rizvi College of Engineering</p>
+          <p className="mt-1 text-xs text-gray-500">Maintained by Raj</p>
         </div>
       </div>
     </footer>

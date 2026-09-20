@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: moinnaik/cpms-frontend:1.0
+          image: cpms-frontend:raj
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
           envFrom:

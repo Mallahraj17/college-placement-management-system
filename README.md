@@ -1,7 +1,6 @@
 # College Placement Management System
 
-This educational copy is maintained at [Mallahraj17/college-placement-management-system](https://github.com/Mallahraj17/college-placement-management-system).
-Based on [Moin MN's original project](https://github.com/MoinMN/college-placement-management-system). See the [original author's license](https://github.com/MoinMN/college-placement-management-system/blob/main/LICENSE) for its usage terms.
+Maintained by **Raj**. [Project repository](https://github.com/Mallahraj17/college-placement-management-system).
 See [LOCAL_SETUP.md](LOCAL_SETUP.md) for corrected setup instructions and verification notes.
 
 ## Table of Contents
@@ -17,10 +16,10 @@ See [LOCAL_SETUP.md](LOCAL_SETUP.md) for corrected setup instructions and verifi
     - [Clone the Repository](#clone-the-repository)
     - [Backend Setup](#backend-setup)
     - [Frontend Setup](#frontend-setup)
-  - [Contributors](#contributors)
+  - [Maintainer](#maintainer)
 
 ## Introduction
-The **College Placement Management System** is a web application designed to streamline and digitize the placement process in colleges and universities. Developed by final year students of **Rizvi College of Engineering**, the system features a multi-role platform catering to students, TPO (Training and Placement Officer), management, and super admin. It aims to minimize manual efforts, improve transparency, and provide real-time tracking of the placement cycle.
+The **College Placement Management System**, maintained by **Raj**, is a web application designed to streamline and digitize the placement process in colleges and universities. The system features a multi-role platform catering to students, TPO (Training and Placement Officer), management, and super admin. It aims to minimize manual efforts, improve transparency, and provide real-time tracking of the placement cycle.
 
 ## Features
 - **Student Portal**: Register and login, update profile, upload resume, view available job opportunities, apply for jobs, and track application status.
@@ -139,9 +138,6 @@ cd college-placement-management-system
    npm run dev
    ```
 
-## Contributors
-- **Member 1**: [Moin MN](https://www.linkedin.com/in/moinnaik/)
-- **Member 2**: Rafat Muskan Shaikh
-- **Member 3**: Saquib Patel
-- **Member 4**: Neeraj Kumar
+## Maintainer
+- **Raj**
 

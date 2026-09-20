@@ -19,7 +19,8 @@ spec:
           command: ['sh', '-c', 'until nc -z mongo-0.mongo.cpms.svc.cluster.local 27017; do echo waiting for mongo; sleep 2; done']
       containers:
         - name: backend
-          image: moinnaik/cpms-backend:1.0
+          image: cpms-backend:raj
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4518
           envFrom:

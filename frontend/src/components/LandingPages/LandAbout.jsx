@@ -40,7 +40,7 @@ function LandAbout() {
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-3 playfair">About CPMS</h2>
         <p className="text-md md:text-lg max-w-3xl mx-auto text-gray-700 px-3">
-          Developed by final year students of Rizvi College of Engineering, CPMS (College Placement Management System) is a powerful web-based platform to streamline and manage campus placements efficiently.
+          Maintained by Raj, CPMS (College Placement Management System) is a web-based platform to streamline and manage campus placements efficiently.
         </p>
       </div>
 

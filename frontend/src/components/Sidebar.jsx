@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaCog, FaSignOutAlt } from 'react-icons/fa';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import axios from 'axios';
-import Logo from '../assets/CPMS.png';
+const Logo = '/CPMS.svg';
 import SubMenu from './Submenu';
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 

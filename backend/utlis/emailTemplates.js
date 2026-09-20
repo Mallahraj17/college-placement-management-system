@@ -1,4 +1,5 @@
 const emailTemplate = ({ role, name, email, password }) => {
+  const siteUrl = new URL(process.env.FRONTEND_URL || 'http://localhost:5173').origin;
   return `
     <div style="background-color: #f4f4f4; padding: 30px; font-family: 'Segoe UI', sans-serif;">
       <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
@@ -22,7 +23,7 @@ const emailTemplate = ({ role, name, email, password }) => {
           </div>
 
           <div style="text-align: center; margin: 30px 0;">
-            <a href="https://cpms-app-theta.vercel.app/" target="_blank"
+            <a href="${siteUrl}" target="_blank"
                style="background-color: #004080; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
               Log In to CPMS
             </a>
@@ -32,7 +33,7 @@ const emailTemplate = ({ role, name, email, password }) => {
 
           <p style="font-size: 14px;">If you did not request this registration, please contact our support team immediately.</p>
 
-          <p style="font-size: 14px; margin-top: 30px;">Best regards,<br>The CPMS Team</p>
+          <p style="font-size: 14px; margin-top: 30px;">Best regards,<br>Raj</p>
         </div>
 
         <div style="background-color: #f0f0f0; text-align: center; padding: 15px; font-size: 12px; color: #777;">

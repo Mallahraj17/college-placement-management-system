@@ -1,6 +1,6 @@
 # frontend/Dockerfile
 # Stage 1: Build Vite + React app
-FROM node:18-alpine AS build
+FROM node:24-alpine AS build
 
 WORKDIR /app
 

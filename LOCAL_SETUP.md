@@ -28,6 +28,8 @@ npm run dev
 
 Open http://localhost:5173. The API uses port 4518 by default. Restart Vite after editing frontend/.env; its variables are embedded at build time.
 
+Set backend FRONTEND_URL to your deployed frontend address before using account emails. It defaults to http://localhost:5173 for local development. Project branding and maintenance contact: Raj.
+
 Student signup creates an unapproved student account. Placement access requires approval through the original administration workflow. An empty database has no initial administrator; the upstream project does not include an administrator seed command.
 
 ## Fixes in this copy
